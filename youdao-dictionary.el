@@ -96,7 +96,7 @@ See URL `https://github.com/xuchunyang/chinese-word-at-point.el' for more info."
     (append-to-file (concat word "\n") nil search-history-file))
   (let (json)
     (with-current-buffer (url-retrieve-synchronously
-                          (-format-request-url word))
+                          (-format-request-url word) t t)
       (set-buffer-multibyte t)
       (goto-char (point-min))
       (when (not (string-match "200 OK" (buffer-string)))
