@@ -55,6 +55,9 @@
   :group 'tools
   :link '(url-link :tag "Github" "https://github.com/xuchunyang/youdao-dictionary.el"))
 
+;;;###autoload
+(define-namespace youdao-dictionary-
+
 (defconst api-url
   "http://fanyi.youdao.com/openapi.do?keyfrom=YouDaoCV&key=659600698&type=data&doctype=json&version=1.1&q=%s"
   "Youdao dictionary API template, URL `http://dict.youdao.com/'.")
